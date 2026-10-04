@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f0e8">
+  <title>Notice Change Radar</title>
+  <meta name="description" content="Compare an original and revised school notice. See what changed, with the wording beside every finding.">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./src/app.js"></script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="Notice Change Radar home"><span class="brand-mark">N<span>↗</span></span><span>notice<span class="brand-light">change</span><br><strong>radar</strong></span></a>
+      <span class="header-note"><span class="privacy-dot"></span> Stays in your browser</span>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <span class="eyebrow">FOR THE "WAIT, DID THAT CHANGE?" MOMENT</span>
+          <h1 id="hero-title">The update behind <em>the update.</em></h1>
+          <p>School plans change. Put the first notice beside the revision and see the details that deserve a second look—without rereading every line.</p>
+          <div class="hero-points"><span><b>01</b> Add both notices</span><span><b>02</b> Review what changed</span><span><b>03</b> Copy your next steps</span></div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="paper paper-back"><span>FIELD TRIP UPDATE</span><p>Bus leaves at <s>8:30</s></p><p class="new-time">7:45 AM</p></div>
+          <div class="paper paper-front"><span>DON'T MISS THIS</span><p>Bring a raincoat.</p><small>Added in the new notice ↗</small></div>
+          <div class="visual-stamp">SPOT THE<br>DIFFERENCE</div>
+        </div>
+      </section>
+
+      <section class="workspace" aria-labelledby="workspace-title">
+        <div class="section-head"><div><span class="eyebrow">YOUR WORKSPACE</span><h2 id="workspace-title">Compare two notices</h2></div><p>Paste the wording exactly as received. We compare text; we don't send or save it.</p></div>
+        <form id="compare-form">
+          <div class="notice-grid">
+            <label class="notice-panel" for="old-notice"><span class="panel-index">01 / BEFORE</span><strong>Original notice</strong><span class="panel-help">The message you saw first</span><textarea id="old-notice" spellcheck="false" placeholder="Paste the original school notice here..." aria-label="Original notice"></textarea></label>
+            <label class="notice-panel revised" for="new-notice"><span class="panel-index">02 / AFTER</span><strong>Revised notice</strong><span class="panel-help">The latest update</span><textarea id="new-notice" spellcheck="false" placeholder="Paste the revised notice here..." aria-label="Revised notice"></textarea></label>
+          </div>
+          <div class="workspace-footer"><div class="secondary-actions"><button id="load-sample" type="button" class="text-button">↗ Load school trip example</button><button id="clear-all" type="button" class="text-button subtle">Clear</button></div><button type="submit" class="primary-button">Compare notices <span aria-hidden="true">→</span></button></div>
+          <p id="status" class="status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section id="results" class="results" aria-label="Comparison results" hidden></section>
+
+      <section class="explain" aria-label="How it works"><div class="explain-rule"></div><span class="eyebrow">A SMALL NOTE ON TRUST</span><p>The app shows the actual words from each notice. It can flag a likely change, but only you can confirm what the school meant. When wording is unclear, check the source.</p></section>
+    </main>
+    <footer>NOTICE CHANGE RADAR <span>Made for calmer school days.</span></footer>
+  </div>
+</body>
+</html>
